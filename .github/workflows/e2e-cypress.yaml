@@ -23,9 +23,7 @@ jobs:
         run: npm ci
         working-directory: ./my-app
       
-      - name: Build Next.js app
-        run: npm run build
-        working-directory: ./my-app
+    
 
       - name: Run Cypress tests
         run: npx start-server-and-test "npm run start" http://localhost:3000 "npm run cypress:headless"
