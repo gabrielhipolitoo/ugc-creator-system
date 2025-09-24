@@ -1,12 +1,14 @@
-
-
 name: Continuous Integration
 
 on:
   push:
     branches:
       - develop
- 
+    paths:
+      - "my-app/**.js"
+      - "my-app/**.ts"
+      - "my-app/**.json"
+      - "my-app/**.yml"
 
 jobs:
   e2e-code-testing:
