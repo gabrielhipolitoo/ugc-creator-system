@@ -1,0 +1,27 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - develop
+ 
+
+jobs:
+  e2e-code-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: my-app
+
+      - name: Run Cypress e2e
+        run: npm run cypress:headless
+        working-directory: my-app
