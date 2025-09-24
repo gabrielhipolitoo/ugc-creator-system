@@ -8,6 +8,6 @@ export default defineConfig({
     testIsolation: false,
   },
   hosts: {
-    localhost: "localhost:3000",
+    localhost: "127.0.0.1",
   },
 });
