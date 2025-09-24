@@ -20,11 +20,15 @@ jobs:
           node-version: 20.12.1
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+        working-directory: ./my-app
+      
+      - name: Build Next.js app
+        run: npm run build
         working-directory: ./my-app
 
       - name: Run Cypress tests
-        run: npm run cypress:headless
+        run: npx start-server-and-test "npm run start" http://localhost:3000 "npm run cypress:headless"
         working-directory: ./my-app
 
    
