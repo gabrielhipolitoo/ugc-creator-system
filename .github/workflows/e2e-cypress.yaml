@@ -3,11 +3,8 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - main
-    paths:
-      - 'my-app/**.js'
-      - 'my-app/**.json'
-      - 'my-app/**.yml'
+      - develop
+   
 
 jobs:
   my-app-tests:
