@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@theme {
+  --color-primary-100: #638aed;
+  --color-neutral-50: #eeeeee;
+  --color-neutral-100: #bebebe;
+  --color-neutral-500: #8e8e8e;
+  --color-green-100: #73ba5a;
+}
+
+@source inline("bg-primary-100 text-primary-100 border-primary-100 bg-neutral-50 bg-neutral-500 bg-color-green-100 ");
