@@ -1,3 +1,5 @@
+
+
 name: Continuous Integration
 
 on:
@@ -19,7 +21,7 @@ jobs:
           node-version: 22.x
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         working-directory: my-app
 
       - name: Run Cypress e2e
