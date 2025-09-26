@@ -1,14 +1,5 @@
-import { loginSchema } from "@/shcemas/validationZod";
+import { loginSchema, LoginSchemaType } from "@/shcemas/validationZod";
 
-export async function SignIn(prevState: any, formData: FormData) {
-  const validatedForm = loginSchema.safeParse({
-    email: formData.get("email"), 
-    password: formData.get("password"),
-  });
-  
-  if (!validatedForm.success) {
-    return { errors: validatedForm.error.flatten().fieldErrors };
-  } 
-
-  return { success: true }; 
+export async function SignIn(prevState: any, formData: LoginSchemaType) {
+  return { success: true };
 }
