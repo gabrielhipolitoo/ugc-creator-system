@@ -14,10 +14,14 @@ import { TextComponent } from "@/baseComponents/TextComponent";
 export const FormLogin = () => {
   const [state, action, pending] = useActionState(SignIn, undefined);
 
-  const { control } = useForm<LoginSchemaType>({
+  const { control, handleSubmit } = useForm<LoginSchemaType>({
     mode: "onBlur",
     resolver: zodResolver(loginSchema),
   });
+
+  const onSubmit = (data: LoginSchemaType) => {
+    action(data);
+  };
 
   return (
     <Container display="flex" direction="flex-col" spaceContent="justify-start">
@@ -45,7 +49,7 @@ export const FormLogin = () => {
         )}
       />
       <button
-        type="submit"
+        onClick={handleSubmit(onSubmit)}
         disabled={pending}
         className="cursor-pointer bg-green-100 border-[1px]  p-3 text-white rounded-sm"
       >
