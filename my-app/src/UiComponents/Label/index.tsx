@@ -1,18 +1,15 @@
-import { WrapperTypographyProps } from "@/baseComponents/WrapperComponent/wrappers/WrapperTypography";
-import { ReactNode } from "react";
-import { TextComponent } from "../../baseComponents/TextComponent";
 import InputComponent, {
   InputComponentProps,
 } from "@/baseComponents/InputComponent";
 
 interface LabelProps extends InputComponentProps {
-  value?: string;
+  label?: string;
 }
 
-export const Label = ({ value, ...props }: LabelProps) => {
+export const Label = ({ label, ...props }: LabelProps) => {
   return (
     <div>
-      {value && <p className="mb-3">{value}</p>}
+      {label && <p className="mb-3">{label}</p>}
       <InputComponent {...props} />
     </div>
   );

@@ -9,7 +9,7 @@ export const loginSchema = z.object({
   password: z
     .string()
     .min(6, { message: "A senha deve ter pelo menos 6 caracteres" }),
-});
+})
 
 export type LoginSchemaType = z.infer<typeof loginSchema>;
 

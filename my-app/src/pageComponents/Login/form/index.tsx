@@ -16,6 +16,7 @@ export const FormLogin = () => {
 
   const { control, handleSubmit } = useForm<LoginSchemaType>({
     mode: "onBlur",
+    defaultValues: { email: "", password: "" },
     resolver: zodResolver(loginSchema),
   });
 
@@ -30,9 +31,10 @@ export const FormLogin = () => {
         control={control}
         render={({ field, fieldState }) => (
           <Label
-            value="Seu Email"
             error={fieldState.error?.message}
             placeholder="Digite seu email"
+            label="Seu Email"
+            {...field}
           />
         )}
       />
@@ -42,9 +44,10 @@ export const FormLogin = () => {
         control={control}
         render={({ field, fieldState }) => (
           <Label
-            value="sua senha"
+            label="sua senha"
             error={fieldState.error?.message}
             placeholder="Digite sua senha"
+            {...field}
           />
         )}
       />
