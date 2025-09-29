@@ -1,5 +1,7 @@
+'use client'
 import { WrapperLayout } from "@/types/tailwind";
 import { processProps } from "@/utils/processProps";
+import { SessionProvider } from "next-auth/react";
 import { ReactNode } from "react";
 
 export interface WrapperContainerProps extends WrapperLayout {
@@ -18,8 +20,10 @@ export const WrapperContainer = ({
   const bgClass = bg ? `bg-${bg}` : "";
 
   return (
-    <section className={`${customClass}    ${bgClass}`} {...rest}>
-      {children}
-    </section>
+    <SessionProvider>
+      <section className={`${customClass}    ${bgClass}`} {...rest}>
+        {children}
+      </section>
+    </SessionProvider>
   );
 };
