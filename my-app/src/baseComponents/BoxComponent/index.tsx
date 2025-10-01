@@ -9,6 +9,7 @@ export const Container = ({ children, ...props }: WrapperContainerProps) => {
       direction="flex-row"
       spaceContent="justify-center"
       gap="gap-8"
+      padding="p-4"
       width="w-full"
       heigth="h-full"
       {...props}
