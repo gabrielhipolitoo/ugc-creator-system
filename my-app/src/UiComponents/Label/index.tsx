@@ -9,7 +9,7 @@ interface LabelProps extends InputComponentProps {
 export const Label = ({ label, ...props }: LabelProps) => {
   return (
     <div>
-      {label && <p className="mb-3">{label}</p>}
+      {label && <p className="text-[15px] mb-1">{label}</p>}
       <InputComponent {...props} />
     </div>
   );

@@ -5,7 +5,7 @@ import { FormLogin } from "./form";
 const Login = () => {
 
   return (
-    <Container width="w-lg" display="flex" direction="flex-col">
+    <Container width="w-lg" display="flex" heigth="h-md" direction="flex-row">
       <Container
         padding="p-4"
         width="w-full"
@@ -15,15 +15,11 @@ const Login = () => {
         <TextComponent
           className="gap"
           as="h1"
-          value="Working"
+          alignText="text-center"
+          value="Creator hub"
           size="text-3xl"
         />
-        <TextComponent
-          className="gap"
-          as="p"
-          value="Faça seu login"
-          size="text-lg"
-        />
+   
         <FormLogin  />
       </Container>
     </Container>

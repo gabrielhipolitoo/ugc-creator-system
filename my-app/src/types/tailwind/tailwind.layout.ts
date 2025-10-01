@@ -1,5 +1,5 @@
 export interface LayoutStyles {
-  width?: "w-full" | "w-md" | "w-lg" | "w-xl";
+  width?: "w-full" | "w-md" | "w-lg" | "w-xl" | "";
   heigth?: "h-full" | "h-md" | "h-lg" | "h-xl";
   display?:
     | "block"

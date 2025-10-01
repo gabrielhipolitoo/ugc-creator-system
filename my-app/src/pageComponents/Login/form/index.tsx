@@ -31,6 +31,7 @@ export const FormLogin = () => {
         control={control}
         render={({ field, fieldState }) => (
           <Label
+            width="w-full"
             error={fieldState.error?.message}
             placeholder="Digite seu email"
             label="Seu Email"
@@ -44,6 +45,7 @@ export const FormLogin = () => {
         control={control}
         render={({ field, fieldState }) => (
           <Label
+            width="w-full"
             label="sua senha"
             error={fieldState.error?.message}
             placeholder="Digite sua senha"
@@ -54,24 +56,28 @@ export const FormLogin = () => {
       <button
         onClick={handleSubmit(onSubmit)}
         disabled={pending}
-        className="cursor-pointer bg-green-100 border-[1px]  p-3 text-white rounded-sm"
+        className="cursor-pointer bg-primary-100 border-[1px] w-full p-3 text-white rounded-sm"
       >
         {pending ? "Entrando..." : "Continuar"}
       </button>
+
       <button
         type="submit"
         disabled={pending}
-        className="cursor-pointer border-[1px] border-neutral-100  p-3 text-neutral-100 rounded-sm"
+        className="cursor-pointer border-[1px] w-full border-neutral-100 font-medium p-3 text-neutral-300 rounded-sm"
       >
         {pending ? "Entrando..." : "Continuar com Google"}
       </button>
-      <TextComponent
-        alignText="text-center"
-        value="Ainda não poussi uma conta?"
-      />
-      <Link href={""} className="text-center">
-        Criar uma conta agora
-      </Link>
+
+      <p className="text-center">
+        Não tem uma conta?
+        <Link
+          href={""}
+          className="text-center   underline line-clamp-1 text-neutral-300 ml-2"
+        >
+          Cadastre-se
+        </Link>
+      </p>
     </Container>
   );
 };
