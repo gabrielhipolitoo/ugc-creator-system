@@ -2,21 +2,29 @@
 
 body,
 html {
+  
   height: 100%;
   width: 100%;
   background-color: #f8f8f8;
 }
 
 * {
+  font-family: var(--font-work-sans), sans-serif;
   box-sizing: border-box;
 }
 
-@theme {
-  --color-primary-100: #638aed;
+@theme  inline {
+  /* Colors*/
+  --color-primary-100: #191616;
   --color-neutral-50: #eeeeee;
   --color-neutral-100: #bebebe;
   --color-neutral-500: #8e8e8e;
+  --color-neutral-300: #555555;
   --color-green-100: #73ba5a;
+
+  /*Fonts*/
+  --font-work-sans:var(--font-work-sans)
+
 }
 
-@source inline("bg-primary-100 text-primary-100 border-primary-100 bg-neutral-50 bg-neutral-500 bg-color-green-100 ");
+@source inline("bg-primary-100 text-primary-100 border-primary-100 bg-neutral-50 bg-neutral-500 bg-color-green-100 color-neutral-300");

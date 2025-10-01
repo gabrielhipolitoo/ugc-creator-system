@@ -7,8 +7,12 @@ export interface InputComponentProps extends LayoutStyles, ColorsStyles {
   placeholder: string;
 }
 
-const InputComponent = ({ bg = "neutral-50", error, ...props }: InputComponentProps) => {
-  const customClass = processProps(["p-3 w-full  rounded-lg "], props);
+const InputComponent = ({
+  bg = "neutral-50",
+  error,
+  ...props
+}: InputComponentProps) => {
+  const customClass = processProps(["p-3 rounded-lg "], props);
   const bgClass = bg ? `bg-${bg}` : "";
   return (
     <>
